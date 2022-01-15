@@ -1632,6 +1632,7 @@ input.error {
 }
 
 .count {
+  line-height: 28px;
   padding-top: 15px;
   width: 75px;
   height: 100px;
