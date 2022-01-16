@@ -1,4 +1,4 @@
-const sendForm = () => {
+const sendForm = ({ someElem = []}) => {
   const form = document.querySelectorAll('.form-horizontal');
 
   const validate = (list) => {
@@ -40,6 +40,13 @@ const sendForm = () => {
 
       formData.forEach((val, key) => {
         formBody[key] = val;
+      });
+
+      someElem.forEach(elem => {
+        const element = document.getElementById(elem.id);
+        if (elem.type === 'input') {
+          formBody[elem.id] = element.value;
+        }
       });
 
       if (validate(formElements)) {

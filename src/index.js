@@ -19,6 +19,13 @@ timer('22 january 2022');
 sertModal();
 smoothScroll();
 formValid();
-sendForm();
+sendForm({
+  someElem: [
+    {
+      type: 'input',
+      id: 'calc-total'
+    }
+  ]
+});
 mask();
 calc(100);
