@@ -8,6 +8,8 @@ import smoothScroll from './modules/smoothScroll';
 import sendForm from './modules/sendForm';
 import formValid from './modules/formValid';
 import mask from './modules/mask';
+import calc from './modules/calc';
+
 
 modal();
 sliderCastomer();
@@ -18,4 +20,5 @@ sertModal();
 smoothScroll();
 formValid();
 sendForm();
-mask()
+mask();
+calc(100);
