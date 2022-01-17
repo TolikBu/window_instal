@@ -761,7 +761,26 @@ p.services-image_mobile {
 #documents {
   background: url('../images/document-bg.jpg');
 }
+.text-center {
+  display: flex;
+  justify-content: space-around;
+}
+
+.certificate {
+  display: none;
+  position: fixed;
+  width: 300px;
+  height: 600px;
+  top: 50%;
+  left: 50%;
+  background-color: #fff;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
 .document-inner {
+  padding: 0;
+  width: 200px;
   display: inline-block;
   position: relative;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
