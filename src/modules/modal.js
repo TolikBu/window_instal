@@ -17,3 +17,20 @@ const modal = () => {
 };
 
 export default modal;
+
+
+//  arr.forEach((elem) => {
+//    elem.addEventListener('click', () => {
+//      modalOverlay.style.display = 'block';
+//      modal.style.display = 'block';
+//      modalServices.style.display = 'block';
+//    });
+//  });
+
+//  modalOverlay.addEventListener('click', (e) => {
+//    if (!e.target.closest('.overlay') || e.target.classList.contains('header-modal__close') || e.target.classList.contains('services-modal__close')) {
+//      modalOverlay.style.display = 'none';
+//      modal.style.display = 'none';
+//      modalServices.style.display = 'none';
+//    }
+//  });
