@@ -1,7 +1,5 @@
 const formValid = () => {
   const form = document.querySelectorAll('.order-form');
-  const calcSquare = document.getElementById('calc-input');
-
   const inputName = document.querySelectorAll('[name="fio"]');
 
   inputName.forEach(elem => {
@@ -20,10 +18,6 @@ const formValid = () => {
       }
       e.target.value = e.target.value;
     });
-  });
-
-  calcSquare.addEventListener('input', (e) => {
-    e.target.value = e.target.value.replace(/[^0-9]/g, '');
   });
 
 };

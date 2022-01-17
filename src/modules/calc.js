@@ -30,13 +30,21 @@ const calc = (price = 100) => {
         total.value = Math.round(progress * totalValue);
       },
     });
+
+    calcSquare.addEventListener('input', (e) => {
+      e.target.value = e.target.value.replace(/[^0-9]/g, '');
+    });
   };
 
-  calcBlock.addEventListener('input', (e) => {
+  try {
+    calcBlock.addEventListener('input', (e) => {
     if (e.target === calcType || e.target === calcSquare || e.target === calcMaterial) {
       countCalc();
     }
   });
+  } catch (error) {
+    console.log('Блок отсуствует на сранице');
+  }
 };
 
 export default calc;

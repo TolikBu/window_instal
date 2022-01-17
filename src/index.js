@@ -14,7 +14,7 @@ import calc from './modules/calc';
 modal();
 sliderCastomer();
 
-// servicesModal();
+servicesModal();
 timer('22 january 2022');
 sertModal();
 smoothScroll();

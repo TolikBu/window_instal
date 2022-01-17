@@ -42,12 +42,16 @@ const sendForm = ({ someElem = []}) => {
         formBody[key] = val;
       });
 
-      someElem.forEach(elem => {
+      try {
+        someElem.forEach(elem => {
         const element = document.getElementById(elem.id);
         if (elem.type === 'input') {
           formBody[elem.id] = element.value;
         }
       });
+      } catch (error) {
+        console.log('Данные со страници калькулятора отсутсвтуют');
+      };
 
       if (validate(formElements)) {
         sendData(formBody)
