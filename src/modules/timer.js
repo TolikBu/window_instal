@@ -3,8 +3,11 @@ const timer = (deadline) => {
   const timerHours = document.querySelectorAll('.count_2 span');
   const timerMinutes = document.querySelectorAll('.count_3 span');
   const timerSeconds = document.querySelectorAll('.count_4 span');
+<<<<<<< HEAD
 
   
+=======
+>>>>>>> task8
 
   const getTimeRemaining = () => {
     let dateStop = new Date(deadline).getTime();
@@ -25,6 +28,7 @@ const timer = (deadline) => {
   const updateClock = () => {
     let getTime = getTimeRemaining();
 
+<<<<<<< HEAD
     timerDays.forEach(dayss => {
       dayss.textContent = `${zero(getTime.days)}`;
     });
@@ -35,6 +39,18 @@ const timer = (deadline) => {
       minutes.textContent = `${zero(getTime.minutes)}`;
     });
     timerSeconds.forEach(seconds => {
+=======
+    timerDays.forEach((dayss) => {
+      dayss.textContent = `${zero(getTime.days)}`;
+    });
+    timerHours.forEach((hour) => {
+      hour.textContent = `${zero(getTime.hours)}`;
+    });
+    timerMinutes.forEach((minutes) => {
+      minutes.textContent = `${zero(getTime.minutes)}`;
+    });
+    timerSeconds.forEach((seconds) => {
+>>>>>>> task8
       seconds.textContent = `${zero(getTime.seconds)}`;
     });
 

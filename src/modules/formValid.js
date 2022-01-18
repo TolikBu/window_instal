@@ -1,6 +1,5 @@
 const formValid = () => {
   const form = document.querySelectorAll('.order-form');
-  
   const inputName = document.querySelectorAll('[name="fio"]');
 
   inputName.forEach(elem => {
