@@ -5,31 +5,47 @@ const servicesSlider = () => {
   const btnLeft = document.querySelector('.services__arrow--left');
   const btnRight = document.querySelector('.services__arrow--right');
 
-  let position = 0;
-  const slideToShow = 2;
+  const slideCount = slide.length;
   const slideToScroll = 1;
+  let position = 0;
+  let slideToShow = 2;
+  // if (document.clientWidth < 576) {
+  //   slideToShow = 1;
+  // } 
   const slideWidth = sliderContainer.clientWidth / slideToShow;
-  const movePosition = slideToScroll * slideWidth;
+  let movePosition = slideToScroll * slideWidth;
   
 
   slide.forEach((item, index) => {
-    item.style.minWidth = slideWidth + 'px';
+    item.style.maxWidth = slideWidth + 'px';
   });
 
   btnLeft.addEventListener('click', () => {
-    
     position -= movePosition;
-    console.log(position);
-    slideTrack.style.transform = 'translateX("position")' + 'px';
+    
+    setPositon();
+    checkBtn();
   });
 
   btnRight.addEventListener('click', () => {
-  
     position += movePosition;
-
-    console.log(position);
-    slideTrack.style.transform = `translateX(${position})` + 'px';
+   
+    setPositon();
+    checkBtn();
   });
+
+  const setPositon = () => {
+    slideTrack.style.transform = `translateX(${position}px)`;
+  };
  
+  const checkBtn = () => {
+    btnRight.setAttribute('disabled', position === 0);
+    btnRight.style.opacity = '0.4';
+    btnLeft.setAttribute('disabled', position <= -(slideCount - slideToShow) * slideWidth);
+    console.log(-(slideCount - slideToShow) * slideWidth);
+  };
+
+
+  checkBtn();
 };
 export default servicesSlider;

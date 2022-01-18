@@ -6,9 +6,24 @@
 .services-slider {
   display: flex;
   transition: .2s;
+  min-width: 2400px;
 }
 
 .services-slide {
   padding: 0;
-  /* min-width: 600px; */
+  margin: 0 auto;
+}
+
+.services__arrow--right {
+  margin-left: 30px;
+}
+
+.services__arrow--left, .services__arrow--right {
+  width: 60px;
+  height: 60px;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
 }
