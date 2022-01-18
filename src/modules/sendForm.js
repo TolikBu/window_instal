@@ -50,7 +50,7 @@ const sendForm = ({ someElem = []}) => {
         }
       });
       } catch (error) {
-        console.log('Данные со страници калькулятора отсутсвтуют');
+        
       };
 
       if (validate(formElements)) {
