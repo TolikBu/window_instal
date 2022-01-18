@@ -1,0 +1,14 @@
+.services-slider__container {
+  min-width: 1200px;
+  overflow: hidden;
+}
+
+.services-slider {
+  display: flex;
+  transition: .2s;
+}
+
+.services-slide {
+  padding: 0;
+  /* min-width: 600px; */
+}

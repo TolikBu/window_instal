@@ -50,7 +50,7 @@ const sendForm = ({ someElem = []}) => {
         }
       });
       } catch (error) {
-        
+       
       };
 
       if (validate(formElements)) {
