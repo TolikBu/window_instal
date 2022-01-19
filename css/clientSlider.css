@@ -1,0 +1,15 @@
+.benefits-inner {
+  width: 576px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.benefits-wrap {
+  display: flex;
+  transition: .2s;
+}
+
+.benefits__item  {
+  padding: 0 10px;
+  margin: 0 auto;
+}
