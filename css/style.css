@@ -500,6 +500,8 @@ input.error {
   background-color: #f5f6f6;
 }
 .benefits-inner {
+  width: 576px;
+  margin: 0 auto;
   text-align: center;
 }
 .benefit-image {
@@ -1598,8 +1600,6 @@ input.error {
 }
 
 .benefits__item {
-  width: 100%;
-  max-width: 185px;
 }
 
 .benefits-arrows {
