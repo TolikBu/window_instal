@@ -45,16 +45,14 @@
 
 @media (max-width: 576px) {
   .services-slider__container {
-    width: 100%;
+    width: 90%;
+    margin: auto;
+   
   }
 
   .services-slider {
     width: 100%;
   }
-  .services-slide {
-    width: 100%;
-  }
-
   .swiper {
     width: 192px;
   }

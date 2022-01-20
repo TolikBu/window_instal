@@ -10,19 +10,10 @@ const servicesSlider = () => {
   let position = 0;
   let slideToShow = 2;
   const slideToScroll = 1;
-  const slideWidth = sliderContainer.clientWidth / slideToShow;
+  let slideWidth = sliderContainer.clientWidth / slideToShow;
   let movePosition = slideToScroll * slideWidth;
 
-  const mobile = (e) => {
-    if (document.documentElement.clientWidth < 576) {
-      console.log('работает');
-    }
-
-    return;
-  };
-
-  mobile();
-
+  
   slideItem.forEach((item) => {
     item.style.minWidth = `${slideWidth}px`;
   });
@@ -54,5 +45,41 @@ const servicesSlider = () => {
   };
 
   checkBtn();
+
+  const mobile = () => {
+    if (document.documentElement.clientWidth < 576) {
+      slideToShow = 1;
+      slideWidth = +sliderContainer.clientWidth;
+      console.log(slideWidth);
+
+      slideItem.forEach((item) => {
+        item.style.minWidth = `${slideWidth}px`;
+      });
+
+       btnNext.addEventListener('click', () => {
+         const itemsLeft = slideCount - (Math.abs(position) + slideToShow * slideWidth) / slideWidth;
+         position -= itemsLeft >= slideToScroll ? movePosition : itemsLeft * slideWidth;
+
+         setPositon();
+         
+       });
+
+       btnPrev.addEventListener('click', () => {
+         const itemsLeft = Math.abs(position) / slideWidth;
+         position += itemsLeft >= slideToScroll ? movePosition : itemsLeft * slideWidth;
+
+         setPositon();
+         
+       });
+
+       const setPositon = () => {
+         slideTrack.style.transform = `translateX(${position}px)`;
+       };
+
+    }
+  };
+
+  mobile();
+
 };
 export default servicesSlider;
