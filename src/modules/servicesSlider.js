@@ -1,35 +1,34 @@
 const servicesSlider = () => {
   const sliderContainer = document.querySelector('.services-slider__container');
   const slideTrack = document.querySelector('.services-slider');
-  const slide = document.querySelectorAll('.services-slide');
-  const btnLeft = document.querySelector('.services__arrow--left');
-  const btnRight = document.querySelector('.services__arrow--right');
+  // const slide = document.querySelectorAll('.services-slide');
+  const btnNext = document.querySelector('.services__arrow--left');
+  const btnPrev = document.querySelector('.services__arrow--right');
+  const slideItem = document.querySelectorAll('.services-slide');
+  const slideCount = slideItem.length;
 
-  const slideCount = slide.length;
-  const slideToScroll = 1;
   let position = 0;
   let slideToShow = 2;
-  // if (document.clientWidth < 576) {
-  //   slideToShow = 1;
-  // } 
+  const slideToScroll = 1;
   const slideWidth = sliderContainer.clientWidth / slideToShow;
   let movePosition = slideToScroll * slideWidth;
-  
 
-  slide.forEach((item, index) => {
-    item.style.maxWidth = slideWidth + 'px';
+  slideItem.forEach((item) => {
+    item.style.minWidth = `${slideWidth}px`;
   });
 
-  btnLeft.addEventListener('click', () => {
-    position -= movePosition;
-    
+  btnNext.addEventListener('click', () => {
+    const itemsLeft = slideCount - (Math.abs(position) + slideToShow * slideWidth) / slideWidth;
+    position -= itemsLeft >= slideToScroll ? movePosition : itemsLeft * slideWidth;
+
     setPositon();
     checkBtn();
   });
 
-  btnRight.addEventListener('click', () => {
-    position += movePosition;
-   
+  btnPrev.addEventListener('click', () => {
+    const itemsLeft = Math.abs(position) / slideWidth;
+    position += itemsLeft >= slideToScroll ? movePosition : itemsLeft * slideWidth;
+
     setPositon();
     checkBtn();
   });
@@ -37,14 +36,12 @@ const servicesSlider = () => {
   const setPositon = () => {
     slideTrack.style.transform = `translateX(${position}px)`;
   };
- 
-  const checkBtn = () => {
-    btnRight.setAttribute('disabled', position === 0);
-    btnRight.style.opacity = '0.4';
-    btnLeft.setAttribute('disabled', position <= -(slideCount - slideToShow) * slideWidth);
-    console.log(-(slideCount - slideToShow) * slideWidth);
-  };
 
+  const checkBtn = () => {
+    btnPrev.disabled = position === 0;
+    // btnPrev.style.opacity = '0.4';
+    btnNext.disabled = position <= -(slideCount - slideToShow) * slideWidth;
+  };
 
   checkBtn();
 };

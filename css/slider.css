@@ -5,8 +5,7 @@
 
 .services-slider {
   display: flex;
-  transition: .2s;
-  min-width: 2400px;
+  transition: 0.2s;
 }
 
 .services-slide {
@@ -18,7 +17,8 @@
   margin-left: 30px;
 }
 
-.services__arrow--left, .services__arrow--right {
+.services__arrow--left,
+.services__arrow--right {
   width: 60px;
   height: 60px;
   border: none;
@@ -27,3 +27,18 @@
   background-color: rgba(0, 0, 0, 0);
   cursor: pointer;
 }
+/* 
+@media (min-width: 768px) {
+  .services-slider__container {
+    max-width: 90%;
+    overflow: hidden;
+  }
+
+  .services-slider {
+    width: 100%;
+  }
+
+  .services-slide {
+    width: 380px;
+  }
+} */
