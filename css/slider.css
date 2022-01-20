@@ -27,18 +27,7 @@
   background-color: rgba(0, 0, 0, 0);
   cursor: pointer;
 }
-/* 
-@media (min-width: 768px) {
-  .services-slider__container {
-    max-width: 90%;
-    overflow: hidden;
-  }
 
-  .services-slider {
-    width: 100%;
-  }
-
-  .services-slide {
-    width: 380px;
-  }
-} */
+.swiper-slide {
+  
+}
