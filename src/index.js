@@ -18,10 +18,6 @@ timer('22 january 2022');
 sertModal();
 smoothScroll();
 formValid();
-<<<<<<< HEAD
-sendForm();
-mask()
-=======
 sendForm({
   someElem: [
     {
@@ -34,4 +30,3 @@ mask();
 calc(100);
 servicesSlider();
 clientSlider();
->>>>>>> task4
