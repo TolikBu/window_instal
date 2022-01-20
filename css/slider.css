@@ -1,5 +1,5 @@
 .services-slider__container {
-  min-width: 1200px;
+  width: 1200px;
   overflow: hidden;
 }
 
@@ -28,6 +28,34 @@
   cursor: pointer;
 }
 
+.swiper {
+  width: 576px;
+  margin: 0 auto;
+  text-align: center;
+  overflow-x: hidden;
+}
+.swiper-wrapper {
+  width: 576px;
+}
 .swiper-slide {
-  
+  width: 192px;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 576px) {
+  .services-slider__container {
+    width: 100%;
+  }
+
+  .services-slider {
+    width: 100%;
+  }
+  .services-slide {
+    width: 100%;
+  }
+
+  .swiper {
+    width: 192px;
+  }
 }

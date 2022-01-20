@@ -13,6 +13,16 @@ const servicesSlider = () => {
   const slideWidth = sliderContainer.clientWidth / slideToShow;
   let movePosition = slideToScroll * slideWidth;
 
+  const mobile = (e) => {
+    if (document.documentElement.clientWidth < 576) {
+      console.log('работает');
+    }
+
+    return;
+  };
+
+  mobile();
+
   slideItem.forEach((item) => {
     item.style.minWidth = `${slideWidth}px`;
   });

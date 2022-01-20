@@ -1,25 +1,23 @@
 const clientSlider = () => {
-  console.log('gfgfgf');
-const slider = new Swiper('.swiper', {
-  slidesPerView: 2,
-  spaceBetween: 0,
+  const slider = new Swiper('.swiper', {
+  slidesPerView: 1,
   loop: true,
-
-  navigation: {
-    nextEl: '.benefits__arrow--left',
-    prevEl: '.benefits__arrow--right',
-  },
+  centeredSlides: true,
 
   autoplay: {
-    delay: 1000,
+    delay: 500,
     disableOnInteraction: false,
   },
 
   breakpoints: {
     576: {
-      slidesPerView: 1,
-      spaceBetween: 20,
+      slidesPerView: 3,
     },
+  },
+  
+  navigation: {
+    nextEl: '.benefits__arrow--left',
+    prevEl: '.benefits__arrow--right',
   },
 });
 };
