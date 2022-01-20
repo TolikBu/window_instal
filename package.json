@@ -15,6 +15,6 @@
   },
   "dependencies": {
     "jshint": "^2.13.3",
-    "swiper": "^7.4.1"
+    "swiper": "^5.4.5"
   }
 }
