@@ -2,13 +2,21 @@ const modal = () => {
   const btn = document.querySelector('.button');
   const modal = document.querySelector('.header-modal');
   const modalOverlay = document.querySelector('.overlay');
+  const utpButton = document.querySelector('.utp-button');
 
-  btn.addEventListener('click', () => {
+  utpButton.addEventListener('click', (e) => {
+    e.preventDefault();
+  });
+ 
+
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
     modalOverlay.style.display = 'block';
     modal.style.display = 'block';
   });
 
   modalOverlay.addEventListener('click', (e) => {
+    e.preventDefault();
     if (!e.target.closest('.header-modal') || e.target.classList.contains('header-modal__close')) {
       modalOverlay.style.display = 'none';
       modal.style.display = 'none';

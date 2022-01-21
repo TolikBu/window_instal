@@ -50,7 +50,6 @@ const servicesSlider = () => {
     if (document.documentElement.clientWidth < 576) {
       slideToShow = 1;
       slideWidth = +sliderContainer.clientWidth;
-      console.log(slideWidth);
 
       slideItem.forEach((item) => {
         item.style.minWidth = `${slideWidth}px`;

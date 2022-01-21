@@ -5,7 +5,7 @@ const clientSlider = () => {
   centeredSlides: true,
 
   autoplay: {
-    delay: 500,
+    delay: 2000,
     disableOnInteraction: false,
   },
 

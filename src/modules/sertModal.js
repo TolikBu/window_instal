@@ -31,11 +31,13 @@ const sertModal = () => {
   });
 
   modalOverlay.addEventListener('click', (e) => {
+    e.preventDefault();
     modalOverlay.style.display = 'none';
     modalSert.style.display = 'none';
   });
 
   btnClose.addEventListener('click', (e) => {
+    e.preventDefault();
     modalOverlay.style.display = 'none';
     modalSert.style.display = 'none';
   });
