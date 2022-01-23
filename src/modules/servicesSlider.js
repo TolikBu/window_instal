@@ -76,7 +76,7 @@ const servicesSlider = () => {
     };
   };
 
-  desctop();
+  
 
   window.addEventListener('resize', function () {
     console.log(document.documentElement.clientWidth);
@@ -86,5 +86,7 @@ const servicesSlider = () => {
       mobile();
     }
   });
+
+  desctop();
 };
 export default servicesSlider;
