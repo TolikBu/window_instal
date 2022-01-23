@@ -79,7 +79,7 @@ const servicesSlider = () => {
   
 
   window.addEventListener('resize', function () {
-    console.log(document.documentElement.clientWidth);
+   
     if (document.documentElement.clientWidth > 576) {
       desctop();
     } else {
