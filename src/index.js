@@ -13,7 +13,7 @@ import clientSlider from './modules/clientSlider';
 modal();
 servicesModal();
 servicesSlider();
-timer('22 january 2022');
+timer('25 january 2022');
 sertModal();
 smoothScroll();
 formValid();

@@ -5,9 +5,6 @@ const sendForm = ({ someElem = [] }) => {
   const errorText = 'Ошибка...';
   const successText = 'Наш менеджер с вами свяжется!';
 
-  form.forEach(elem => {
-    console.log(elem);
-  })
 
   statusBlock.style.color = 'green';
 
@@ -41,7 +38,6 @@ const sendForm = ({ someElem = [] }) => {
 
   const submitForm = (elem) => {
     const formElements = elem.querySelectorAll('input');
-    console.log(formElements);
 
     const formData = new FormData(elem);
     const formBody = {};

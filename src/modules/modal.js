@@ -10,13 +10,13 @@ const modal = () => {
  
 
   btn.addEventListener('click', (e) => {
-    e.preventDefault();
+    
     modalOverlay.style.display = 'block';
     modal.style.display = 'block';
   });
 
   modalOverlay.addEventListener('click', (e) => {
-    e.preventDefault();
+    
     if (!e.target.closest('.header-modal') || e.target.classList.contains('header-modal__close')) {
       modalOverlay.style.display = 'none';
       modal.style.display = 'none';

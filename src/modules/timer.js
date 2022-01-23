@@ -37,10 +37,18 @@ const timer = (deadline) => {
     });
 
     if (getTime.timeRemaining < 0) {
-      timerDays.textContent = '00';
-      timerHours.textContent = '00';
-      timerMinutes.textContent = '00';
-      timerSeconds.textContent = '00';
+      timerDays.forEach((dayss) => {
+        dayss.textContent = '00';
+      });
+      timerHours.forEach((hour) => {
+        hour.textContent = '00';
+      });
+      timerMinutes.forEach((minutes) => {
+        minutes.textContent = '00';
+      });
+      timerSeconds.forEach((seconds) => {
+        seconds.textContent = '00';
+      });
     }
   };
   setInterval(updateClock, 1000);

@@ -5,14 +5,14 @@ const servicesModal = () => {
 
   btn.forEach((elem) => {
     elem.addEventListener('click', (e) => {
-      e.preventDefault();
+      
       modal.style.display = 'block';
       modalOverlays.style.display = 'block';
     });
   });
 
   modalOverlays.addEventListener('click', (e) => {
-    e.preventDefault();
+    
     if (!e.target.closest('.services-modal') || e.target.classList.contains('services-modal__close')) {
       modalOverlays.style.display = 'none';
       modal.style.display = 'none';
