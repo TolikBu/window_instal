@@ -75,11 +75,14 @@ const sendForm = ({ someElem = [] }) => {
           statusBlock.textContent = errorText;
           setInterval(() => {
             statusBlock.remove(form);
-          }, 1000);
+          }, 2000);
         });
     } else {
       alert('Введит имя не короче 3-х символов, телефон должен содержать 11 цифр');
       statusBlock.textContent = errorText;
+      setInterval(() => {
+        statusBlock.remove(form);
+      }, 2000);
       return;
     }
   };
@@ -91,7 +94,6 @@ const sendForm = ({ someElem = [] }) => {
     form.forEach(elem => {
       elem.addEventListener('submit', (e) => {
         e.preventDefault();
-        console.log(elem);
         submitForm(elem);
       });
     });

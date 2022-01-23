@@ -1075,13 +1075,13 @@
           Оставьте, пожалуйста, заявку. Мы позвоним Вам в ближайшее время и
           ответим на все вопросы!
         </p>
-        <form name="callback-form">
+        <form name="callback-form"  class="form-horizontal">
           <div class="form-group">
             <input
               type="text"
               name="fio"
               class="form-control required"
-              placeholder="Ваше имя*"
+              placeholder="Ваше имя*" required 
             />
           </div>
           <div class="form-group">
@@ -1090,7 +1090,7 @@
               name="phone"
               class="form-control required"
               placeholder="Контактный телефон*"
-              data-mask="+7 (999) 999-99-99"
+              data-mask="+7 (999) 999-99-99" required
             />
           </div>
           <div class="form-action">
@@ -1123,13 +1123,13 @@
           Оставьте, пожалуйста, заявку и мы свяжемся с Вами, чтобы рассказать
           детали акции и Вашу скидку!
         </p>
-        <form name="order-form">
+        <form name="order-form" class="form-horizontal">
           <div class="form-group">
             <input
               type="text"
               name="fio"
               class="form-control required"
-              placeholder="Ваше имя*"
+              placeholder="Ваше имя*" required
             />
           </div>
           <div class="form-group">
@@ -1138,7 +1138,7 @@
               name="phone"
               class="form-control required"
               placeholder="Контактный телефон*"
-              data-mask="+7 (999) 999-99-99"
+              data-mask="+7 (999) 999-99-99" required
             />
           </div>
           <div class="form-action">
@@ -1168,13 +1168,13 @@
         <p class="text-center">
           Оставьте заявку и специалист свяжется с Вами в ближайшее время!
         </p>
-        <form name="application-form">
+        <form name="application-form" class="form-horizontal">
           <div class="form-group">
             <input
               type="text"
               name="fio"
               class="form-control required"
-              placeholder="Ваше имя*"
+              placeholder="Ваше имя*" required
             />
           </div>
           <div class="form-group">
@@ -1183,7 +1183,7 @@
               name="phone"
               class="form-control required"
               placeholder="Контактный телефон*"
-              data-mask="+7 (999) 999-99-99"
+              data-mask="+7 (999) 999-99-99" required
             />
           </div>
           <div class="form-action">
@@ -1225,12 +1225,12 @@
         </div>
         <div class="box-modal_body rf">
             <p class="text-center">Оставьте, пожалуйста, заявку. Мы позвоним Вам в ближайшее время и ответим на все вопросы!</p>
-            <form name="callback-form">
+            <form name="callback-form" class="form-horizontal">
                 <div class="form-group">
-                    <input type="text" name="fio" class="form-control required" placeholder="Ваше имя*">
+                    <input type="text" name="fio" class="form-control required" placeholder="Ваше имя*" required>
                 </div>
                 <div class="form-group">
-                    <input type="text" name="phone" class="form-control required" placeholder="Контактный телефон*" data-mask="+7 (999) 999-99-99">
+                    <input type="text" name="phone" class="form-control required" placeholder="Контактный телефон*" data-mask="+7 (999) 999-99-99" required>
                 </div>
                 <div class="form-action">
                     <div class="text-center"><button type="submit" class="btn btn-warning feedback">Свяжитесь со мной!</button></div>
@@ -1254,14 +1254,14 @@
 			</div>
 			<div class="box-modal_body rf">
 				<p class="text-center">Оставьте заявку и специалист свяжется с Вами в ближайшее время!</p>
-				<form name="application-form">
+				<form name="application-form" class="form-horizontal">
 					<div class="form-group">
-						<input type="text" name="fio" class="form-control required" placeholder="Ваше имя*">
+						<input type="text" name="fio" class="form-control required" placeholder="Ваше имя*" required>
 					</div>
 					<div class="form-group">
-						<input type="text" name="phone" class="form-control required" placeholder="Контактный телефон*" data-mask="+7 (999) 999-99-99">
+						<input type="text" name="phone" class="form-control required" placeholder="Контактный телефон*" data-mask="+7 (999) 999-99-99"  required>
 					</div>
-					<div class="form-action">
+					<div class="form-action">    
 						<div class="text-center"><button type="submit" class="btn btn-success feedback">Вызвать замерщика!</button></div>
 					</div>
 					<input type="hidden" name="page" value="Окна">
