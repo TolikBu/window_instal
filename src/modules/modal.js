@@ -10,7 +10,7 @@ const modal = () => {
  
 
   btn.addEventListener('click', (e) => {
-    
+    e.preventDefault();
     modalOverlay.style.display = 'block';
     modal.style.display = 'block';
   });
