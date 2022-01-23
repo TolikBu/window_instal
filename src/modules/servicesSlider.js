@@ -13,72 +13,78 @@ const servicesSlider = () => {
   let slideWidth = sliderContainer.clientWidth / slideToShow;
   let movePosition = slideToScroll * slideWidth;
 
-  
-  slideItem.forEach((item) => {
-    item.style.minWidth = `${slideWidth}px`;
-  });
+  const desctop = () => {
+    slideToShow = 2;
+    slideWidth = sliderContainer.clientWidth / slideToShow;
+    slideItem.forEach((item) => {
+      item.style.minWidth = `${slideWidth}px`;
+    });
 
-  btnNext.addEventListener('click', () => {
-    const itemsLeft = slideCount - (Math.abs(position) + slideToShow * slideWidth) / slideWidth;
-    position -= itemsLeft >= slideToScroll ? movePosition : itemsLeft * slideWidth;
+    btnNext.addEventListener('click', () => {
+      const itemsLeft = slideCount - (Math.abs(position) + slideToShow * slideWidth) / slideWidth;
+      position -= itemsLeft >= slideToScroll ? movePosition : itemsLeft * slideWidth;
 
-    setPositon();
+      setPositon();
+      checkBtn();
+    });
+
+    btnPrev.addEventListener('click', () => {
+      const itemsLeft = Math.abs(position) / slideWidth;
+      position += itemsLeft >= slideToScroll ? movePosition : itemsLeft * slideWidth;
+
+      setPositon();
+      checkBtn();
+    });
+
+    const setPositon = () => {
+      slideTrack.style.transform = `translateX(${position}px)`;
+    };
+
+    const checkBtn = () => {
+      btnPrev.disabled = position === 0;
+      // btnPrev.style.opacity = '0.4';
+      btnNext.disabled = position <= -(slideCount - slideToShow) * slideWidth;
+    };
+
     checkBtn();
-  });
-
-  btnPrev.addEventListener('click', () => {
-    const itemsLeft = Math.abs(position) / slideWidth;
-    position += itemsLeft >= slideToScroll ? movePosition : itemsLeft * slideWidth;
-
-    setPositon();
-    checkBtn();
-  });
-
-  const setPositon = () => {
-    slideTrack.style.transform = `translateX(${position}px)`;
   };
-
-  const checkBtn = () => {
-    btnPrev.disabled = position === 0;
-    // btnPrev.style.opacity = '0.4';
-    btnNext.disabled = position <= -(slideCount - slideToShow) * slideWidth;
-  };
-
-  checkBtn();
 
   const mobile = () => {
-    if (document.documentElement.clientWidth < 576) {
-      slideToShow = 1;
-      slideWidth = +sliderContainer.clientWidth;
+    slideToShow = 1;
+    slideWidth = +sliderContainer.clientWidth;
 
-      slideItem.forEach((item) => {
-        item.style.minWidth = `${slideWidth}px`;
-      });
+    slideItem.forEach((item) => {
+      item.style.minWidth = `${slideWidth}px`;
+    });
 
-       btnNext.addEventListener('click', () => {
-         const itemsLeft = slideCount - (Math.abs(position) + slideToShow * slideWidth) / slideWidth;
-         position -= itemsLeft >= slideToScroll ? movePosition : itemsLeft * slideWidth;
+    btnNext.addEventListener('click', () => {
+      const itemsLeft = slideCount - (Math.abs(position) + slideToShow * slideWidth) / slideWidth;
+      position -= itemsLeft >= slideToScroll ? movePosition : itemsLeft * slideWidth;
 
-         setPositon();
-         
-       });
+      setPositon();
+    });
 
-       btnPrev.addEventListener('click', () => {
-         const itemsLeft = Math.abs(position) / slideWidth;
-         position += itemsLeft >= slideToScroll ? movePosition : itemsLeft * slideWidth;
+    btnPrev.addEventListener('click', () => {
+      const itemsLeft = Math.abs(position) / slideWidth;
+      position += itemsLeft >= slideToScroll ? movePosition : itemsLeft * slideWidth;
 
-         setPositon();
-         
-       });
+      setPositon();
+    });
 
-       const setPositon = () => {
-         slideTrack.style.transform = `translateX(${position}px)`;
-       };
-
-    }
+    const setPositon = () => {
+      slideTrack.style.transform = `translateX(${position}px)`;
+    };
   };
 
-  mobile();
+  desctop();
 
+  window.addEventListener('resize', function () {
+    console.log(document.documentElement.clientWidth);
+    if (document.documentElement.clientWidth > 576) {
+      desctop();
+    } else {
+      mobile();
+    }
+  });
 };
 export default servicesSlider;
